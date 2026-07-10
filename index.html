@@ -110,10 +110,10 @@
     border-bottom:1px solid var(--rule);
   }
   .terminal-bar .nav-dots-static{ display:flex; gap:8px; flex-shrink:0; }
-  .terminal-bar span{ width:10px; height:10px; border-radius:50%; flex-shrink:0; }
-  .terminal-bar span:nth-child(1){ background: var(--alert); opacity:.8; }
-  .terminal-bar span:nth-child(2){ background: var(--ink-faint); opacity:.6; }
-  .terminal-bar span:nth-child(3){ background: var(--signal); opacity:.8; }
+  .terminal-bar span.dot{ width:10px; height:10px; border-radius:50%; flex-shrink:0; display:inline-block; }
+  .terminal-bar span.dot:nth-child(1){ background: var(--alert); opacity:.8; }
+  .terminal-bar span.dot:nth-child(2){ background: var(--ink-faint); opacity:.6; }
+  .terminal-bar span.dot:nth-child(3){ background: var(--signal); opacity:.8; }
   .terminal-title{
     font-family: var(--mono); font-size:.78rem; color: var(--ink-faint);
     margin-left:8px;
@@ -339,7 +339,7 @@
 
     <div class="terminal">
       <div class="terminal-bar">
-        <span></span><span></span><span></span>
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
         <span class="terminal-title">iker@homelab — session</span>
       </div>
       <div class="terminal-body" id="typeTarget">
@@ -500,13 +500,12 @@
           <span class="tag">Infrastructure</span>
           <span class="tag tag-alt">Cybersecurity Lab</span>
         </div>
-                 
+        
         <div style="padding: 0 24px 24px;">
           <a class="btn btn-secondary" href="https://github.com/b41uk/proxmox-homelab" target="_blank" rel="noopener noreferrer">
             ./view-docs.sh
           </a>
         </div>
-
       </div>
 
       <div class="card project-card">
